@@ -23,7 +23,6 @@ a{
 }
 
 header{
-  font-family:sans-serif;
   grid-area: head;
   text-align: center;
   color: orange;
