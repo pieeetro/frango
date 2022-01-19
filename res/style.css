@@ -1,0 +1,76 @@
+
+body{
+  color: beige;
+  background: #111;
+  font-family: monospace;
+
+  min-height: 25rem;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns:
+    [left] 10rem auto 10rem [right];
+  grid-template-rows:
+    [top] 6rem auto 6rem [bottom];
+  grid-template-areas:
+    "head head head"
+    "panleft mainbody mainbody"
+    "foot foot foot";
+}
+
+a{
+  color: inherit;
+}
+
+header{
+  grid-area: head;
+  text-align: center;
+  color: orange;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  color: grey;
+}
+
+/
+.navbar a{
+  padding: 0 10%;
+}
+
+aside {
+  border:orange;
+  border-width: thin;
+  border-style: dotted;
+  padding: 1em 1em;
+  justify-content: center;
+  grid-area:panleft;
+}
+
+aside h{
+  text-align: center;
+  color: orange;
+}
+
+div.mainbody {
+  padding: 1rem 1rem;
+  text-align: justify;
+  grid-area: mainbody;
+}
+
+footer{
+  text-align: center;
+  display: block;
+  grid-area: foot;
+}
+
+@media screen and (max-width: 50rem) {
+  aside{
+    display: none;
+  }
+  div.mainbody {
+    grid-column-start: left;
+    grid-column-end: right;
+  }
+}
