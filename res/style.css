@@ -1,4 +1,3 @@
-
 body{
   color: beige;
   background: #111;
@@ -6,16 +5,16 @@ body{
 
   min-height: 25rem;
   display: grid;
-  width: 100%;
-  height: 100%;
+
   grid-template-columns:
-    [left] 10rem auto 10rem [right];
+    [left] 10rem auto [right];
   grid-template-rows:
-    [top] 6rem auto 6rem [bottom];
+    [top] 6rem auto auto 6rem [bottom];
   grid-template-areas:
-    "head head head"
-    "panleft mainbody mainbody"
-    "foot foot foot";
+    "head head"
+    "panleft abstract"
+    "mainbody mainbody"
+    "down down";
 }
 
 a{
@@ -34,18 +33,26 @@ header{
   color: grey;
 }
 
-/
 .navbar a{
   padding: 0 10%;
 }
 
+.abstract article{
+  border-bottom: none;
+}
+
+article{
+  border-bottom: grey thin dashed;
+}
+
 aside {
-  border:orange;
+  border: orange;
   border-width: thin;
   border-style: dotted;
+  margin: 1em;
   padding: 1em 1em;
   justify-content: center;
-  grid-area:panleft;
+  grid-area: panleft;
 }
 
 aside h{
@@ -53,23 +60,52 @@ aside h{
   color: orange;
 }
 
-div.mainbody {
-  padding: 1rem 1rem;
+.abstract {
+  margin: 0rem 1rem;
+  text-align: justify;
+  grid-area: abstract;
+}
+
+.mainbody{
+  margin: 0rem 1rem;
   text-align: justify;
   grid-area: mainbody;
 }
 
 footer{
+  grid-area: down;
   text-align: center;
-  display: block;
-  grid-area: foot;
 }
 
-@media screen and (max-width: 50rem) {
-  aside{
-    display: none;
+@media screen and (max-width: 40rem) {
+  body {
+    grid-template-columns:
+      [left] auto [right];
+    grid-template-rows:
+      [top] 6rem auto auto auto 6rem [bottom];
+    grid-template-areas:
+      "head"
+      "nav"
+      "abstract"
+      "mainbody"
+      "down";
   }
-  div.mainbody {
+
+  aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: nav;
+  }
+
+  .abstract {
+    text-align: center;
+    grid-column-start: left;
+    grid-column-end: right;
+  }
+
+  .mainbody {
     grid-column-start: left;
     grid-column-end: right;
   }
