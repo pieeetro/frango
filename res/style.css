@@ -2,19 +2,6 @@ body{
   color: beige;
   background: #111;
   font-family: monospace;
-
-  min-height: 25rem;
-  display: grid;
-
-  grid-template-columns:
-    [left] 10rem auto [right];
-  grid-template-rows:
-    [top] 6rem auto auto 6rem [bottom];
-  grid-template-areas:
-    "head head"
-    "panleft abstract"
-    "mainbody mainbody"
-    "down down";
 }
 
 a{
@@ -22,23 +9,11 @@ a{
 }
 
 header{
-  grid-area: head;
-  text-align: center;
-  color: orange;
+  color: orangered;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-around;
   color: grey;
-}
-
-.navbar a{
-  padding: 0 10%;
-}
-
-.abstract article{
-  border-bottom: none;
 }
 
 article{
@@ -46,67 +21,45 @@ article{
 }
 
 aside {
-  border: orange;
+  border: orangered;
   border-width: thin;
   border-style: dotted;
-  margin: 1em;
-  padding: 1em 1em;
-  justify-content: center;
-  grid-area: panleft;
 }
 
 aside h{
-  text-align: center;
-  color: orange;
+  color: orangered;
 }
 
-.abstract {
-  margin: 0rem 1rem;
-  text-align: justify;
-  grid-area: abstract;
-}
-
-.mainbody{
-  margin: 0rem 1rem;
-  text-align: justify;
-  grid-area: mainbody;
-}
-
-footer{
-  grid-area: down;
-  text-align: center;
-}
-
-@media screen and (max-width: 40rem) {
-  body {
-    grid-template-columns:
-      [left] auto [right];
-    grid-template-rows:
-      [top] 6rem auto auto auto 6rem [bottom];
-    grid-template-areas:
-      "head"
-      "nav"
-      "abstract"
-      "mainbody"
-      "down";
+@media (prefers-color-scheme: light) {
+  body{
+    color: #111;
+    background: white;
+    font-family: monospace;
   }
 
-  aside{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    grid-area: nav;
+  a{
+    color: inherit;
   }
 
-  .abstract {
-    text-align: center;
-    grid-column-start: left;
-    grid-column-end: right;
+  header{
+    color: orangered;
   }
 
-  .mainbody {
-    grid-column-start: left;
-    grid-column-end: right;
+  .navbar {
+    color: grey;
+  }
+
+  article{
+    border-bottom: grey thin dashed;
+  }
+
+  aside {
+    border: orangered;
+    border-width: thin;
+    border-style: dotted;
+  }
+
+  aside h{
+    color: orangered;
   }
 }

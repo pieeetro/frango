@@ -1,0 +1,93 @@
+body{
+  display: grid;
+  grid-template-columns:
+    [left] 10rem auto [right];
+  grid-template-rows:
+    [top] 6rem auto auto 6rem [bottom];
+  grid-template-areas:
+    "head head"
+    "panleft abstract"
+    "mainbody mainbody"
+    "down down";
+}
+
+a{
+  color: inherit;
+}
+
+header{
+  grid-area: head;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar a{
+  padding: 0 10%;
+}
+
+
+aside {
+  margin: 1em;
+  padding: 1em 1em;
+  justify-content: center;
+  grid-area: panleft;
+}
+
+aside h{
+  text-align: center;
+}
+
+.abstract {
+  margin: 0rem 1rem;
+  text-align: justify;
+  grid-area: abstract;
+}
+
+.mainbody{
+  margin: 0rem 1rem;
+  text-align: justify;
+  grid-area: mainbody;
+}
+
+footer{
+  grid-area: down;
+  text-align: center;
+}
+
+@media screen and (max-width: 40rem) {
+  body {
+    grid-template-columns:
+      [left] auto [right];
+    grid-template-rows:
+      [top] 6rem auto auto auto 6rem [bottom];
+    grid-template-areas:
+      "head"
+      "nav"
+      "abstract"
+      "mainbody"
+      "down";
+  }
+
+  aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: nav;
+  }
+
+  .abstract {
+    text-align: center;
+    grid-column-start: left;
+    grid-column-end: right;
+  }
+
+  .mainbody {
+    grid-column-start: left;
+    grid-column-end: right;
+  }
+}
