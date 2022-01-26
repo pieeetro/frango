@@ -1,7 +1,8 @@
 body{
+  min-width: 300px;
   display: grid;
   grid-template-columns:
-    [left] 15rem auto [right];
+    [left] 15rem 1fr [right];
   grid-template-rows:
     [top] 8rem auto auto 6rem [bottom];
   grid-template-areas:
@@ -31,7 +32,7 @@ header{
 
 
 aside {
-  margin: 1em;
+  margin: 1rem;
   padding: 1em 1em;
   justify-content: center;
   grid-area: panleft;
@@ -54,22 +55,24 @@ aside h{
 }
 
 footer{
+  font-size: smaller;
   grid-area: down;
   text-align: center;
+  word-wrap: break-word
 }
 
 @media screen and (max-width: 40rem) {
   body {
     grid-template-columns:
-      [left] auto [right];
+      [left] 2fr 2fr [right];
     grid-template-rows:
       [top] 8rem auto auto auto 6rem [bottom];
     grid-template-areas:
-      "head"
-      "nav"
-      "abstract"
-      "mainbody"
-      "down";
+      "head head"
+      "nav nav"
+      "abstract abstract"
+      "mainbody mainbody"
+      "down down";
   }
 
   aside{

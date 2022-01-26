@@ -15,9 +15,14 @@ header{
 header h1{
   padding: 0.75em;
   background-image: url(pix/logo.jpeg);
-  background-size: 4em 100%;
-  background-repeat: no-repeat;
+  background-size: 22%;
+  background-repeat: repeat;
   background-position: center;
+}
+
+header mark{
+  color: inherit;
+    background-color: rgba(17,17,27,0.6)
 }
 
 .navbar {
@@ -43,6 +48,10 @@ aside h{
     color: #111;
     background: white;
     font-family: monospace;
+  }
+
+  header mark{
+    background-color: rgba(255,255,255,0.6)
   }
 
   a{
