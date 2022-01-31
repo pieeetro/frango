@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../../res/structure.css">
     <link rel="stylesheet" type="text/css" href="../../res/style.css">
     <link rel="stylesheet" type="text/css" href="./res/style.css">
+    <script src="./res/page.js"></script>
     <link rel="icon" type="image/x-icon" href="../../res/pix/logo.jpeg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -19,13 +20,23 @@
     </header>
 
     <div class="mainbody">
-      <h1>Flamingo</h1>
-
+      <article>
+        <h1>Flamingo</h1>
+        <p>Prezzo: 5€</p>
+        <div class="buysteal">
+          <button id="buy" onclick="buy()">compra</button>
+          <button id="steal" onclick="steal()">ruba</button>
+        </div>
+        <span id="bought"><p>Invia 5€ a questo wallet <br>XMR:48SuA3pjgXZXkgZGauC1LqVN7cV3c8G1sG1FU5kfR4ySMkxqoKZYosmjQvJzWi87117RYYwdzv8Z9RZFo1d3Nngx6g8wM5M</p></span>
+        <span id="stolen"><p>Considera la possibilità di sottopagare<br>XMR:48SuA3pjgXZXkgZGauC1LqVN7cV3c8G1sG1FU5kfR4ySMkxqoKZYosmjQvJzWi87117RYYwdzv8Z9RZFo1d3Nngx6g8wM5M</p></span>
+        <div class="game">
+          <canvas id="board" width="800" height="600"></canvas>
+        </div>
+      </article>
     </div>
 
     <footer>
-      <p>Donazioni: <br>
-        XMR:48SuA3pjgXZXkgZGauC1LqVN7cV3c8G1sG1FU5kfR4ySMkxqoKZYosmjQvJzWi87117RYYwdzv8Z9RZFo1d3Nngx6g8wM5M <br>
+      <p>
         Contatti: scrivi una mail a <a href="mailto:frango@tutanota.com">frango@tutanota.com</a><br>
         <a href="../../LICENSE">licenza</a> - frango games inc. - sito in costruzione</p>
     <footer>

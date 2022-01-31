@@ -43,6 +43,11 @@ aside h{
   color: orangered;
 }
 
+canvas{
+  background-color: beige;
+}
+
+
 @media (prefers-color-scheme: light) {
   body{
     color: #111;
