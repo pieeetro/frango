@@ -52,7 +52,7 @@ class Enemy {
     }
 
     update() {
-        //this.draw();
+        this.draw();
         if (detection() == true){
             followPlayer();
         }else{
