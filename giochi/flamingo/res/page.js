@@ -1,13 +1,13 @@
-console.log("pippo");
-
 var lol = false;
-//scrivere qui buy/crack;
+
+
 function buy() {
   var x = document.getElementById("bought");
   var y = document.getElementById("board");
   if(lol === false){
     x.style.display = "block";
     y.style.display = "block";
+    x.scrollIntoView()
     lol = true;
   }
 }
@@ -17,6 +17,7 @@ function steal() {
   if(lol === false){
     x.style.display = "block";
     y.style.display = "block";
+    x.scrollIntoView()
     lol = true;
   }
 }

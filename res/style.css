@@ -47,6 +47,11 @@ canvas{
   background-color: beige;
 }
 
+footer{
+  background-color: #111;
+  color: white;
+}
+
 
 @media (prefers-color-scheme: light) {
   body{
@@ -84,4 +89,11 @@ canvas{
   aside h{
     color: orangered;
   }
+
+  footer{
+    margin: 0.5rem;
+    background-color: white;
+    color:#111;
+  }
+
 }

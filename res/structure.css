@@ -6,12 +6,12 @@ body{
   grid-template-columns:
     [left] 15rem 1fr [right];
   grid-template-rows:
-    [top] 8rem auto auto 6rem [bottom];
+    [top] 8rem auto auto 5rem[bottom];
   grid-template-areas:
     "head head"
     "panleft abstract"
     "mainbody mainbody"
-    "down down";
+    "foot foot"
 }
 
 a{
@@ -57,10 +57,17 @@ aside h{
 }
 
 footer{
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  height: 5rem;
+  width: 100vw;
+
   font-size: smaller;
-  grid-area: down;
   text-align: center;
-  word-wrap: break-word
+  overflow-wrap: break-word;
 }
 
 div.game{
@@ -76,13 +83,13 @@ div.game{
     grid-template-columns:
       [left] 2fr 2fr [right];
     grid-template-rows:
-      [top] 8rem auto auto auto 6rem [bottom];
+      [top] 8rem auto auto auto 5rem[bottom];
     grid-template-areas:
       "head head"
       "nav nav"
       "abstract abstract"
       "mainbody mainbody"
-      "down down";
+      "foot foot"
   }
 
   aside{
