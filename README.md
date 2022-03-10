@@ -1,4 +1,4 @@
 # frango
 
 il sito ufficiale
-> Disponibile [qui](frangogamesinc.netlify.app)
+> Disponibile [qui](http://frangogamesinc.netlify.app)
