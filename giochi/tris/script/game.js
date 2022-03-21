@@ -26,7 +26,7 @@ const sfx = {
         src: ['./effects/lololol 18-X.wav']
     }),
     ippipi: new Howl({
-        src: ['./effects/ippipi.wav'],
+        src: ['./effects/ippipi.mp3'],
         loop: true
     })
 }
@@ -65,7 +65,7 @@ function handleClick(e) {
 
 function isDraw(){
     return [...cellElements].every(cell => {
-        return cell.classList.contains(X_CLASS) || 
+        return cell.classList.contains(X_CLASS) ||
                cell.classList.contains(CIRCLE_CLASS);
     });
 }
