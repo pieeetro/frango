@@ -10,12 +10,16 @@ const WINNING_COMBINATIONS = [
     [0, 4, 8],
     [2, 4, 6]
   ]
+  var Xwinnumber = 0;
+  var Owinnnumber = 0;
 
 const cellElements = document.querySelectorAll('[data-cell]');
 const board = document.getElementById('board');
 const winningMessageElement = document.getElementById('winning-message');
 const restartButton = document.getElementById('restart-button');
 const winningMessageTextElement = document.querySelector('[data-winning-message-text]');
+var Xwins = document.getElementById('x-wincounter');
+var Owins = document.getElementById('o-wincounter');
 let circleTurn
 
 const sfx = {
@@ -75,6 +79,13 @@ function endGame(draw){
         winningMessageTextElement.innerText = 'Draw';
     }else{
         winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} Wins!`
+          if(circleTurn == true){
+              Owinnnumber++;
+              Owins.innerHTML = "o's wins: " + Owinnnumber;
+          } else{
+              Xwinnumber++;
+              Xwins.innerHTML = "x's wins: " + Xwinnumber;
+          }
     }
     winningMessageElement.classList.add('show');
 }

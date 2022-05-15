@@ -144,3 +144,14 @@ body {
 .winning-message.show {
     display: flex;
 }
+
+#x-wincounter{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin-left: 3em;
+}
+#o-wincounter{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin-left: 3em;
+}
